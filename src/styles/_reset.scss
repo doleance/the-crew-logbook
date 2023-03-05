@@ -1,0 +1,49 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+  }
+  
+  a,
+  button,
+  dd,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  input,
+  li,
+  p,
+  span {
+	text-size-adjust: 100%; /* prevent ios scaling small font-size */
+  }
+  
+  ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+  }
+  
+  fieldset {
+	border: 0;
+	margin: 0;
+	min-width: 0;
+	padding: 0;
+  }
+  
+  button,
+  input,
+  textarea {
+	appearance: none; /* prevent ios device using its own appearance for inputs */
+	font-family: inherit; /* fix issue related to usage of system ui font-family */
+  }
+  
+  button {
+	background-color: transparent;
+	border-width: 0;
+	cursor: pointer;
+  }
+  

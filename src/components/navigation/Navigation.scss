@@ -1,0 +1,146 @@
+@import '../../styles/mixins';
+
+.page-navigation-wrapper {
+	bottom: 12px;
+	left: 50%;
+	position: fixed;
+	transform: translate(-50%, 0);
+
+	@include md {
+		bottom: unset;
+		display: flex;
+		justify-content: center;
+		position: unset;
+		transform: none;
+	}
+}
+
+.page-navigation {
+    border: solid var(--light-blue, cornflowerblue) 1px;
+    border-radius: 4px;
+	bottom: 12px;
+	box-shadow: 0 0 12px var(--box-shadow-grey, #cccccc);
+	height: 60px;
+	position: relative;
+	width: 280px;
+
+	@include md {
+		border-radius: 50%;
+		bottom: unset;
+		display: grid;
+		height: 116px;
+		margin: 0 16px;
+		padding: 12px;
+		top: 50%;
+		transform: translate(0, -50%);
+		width: 116px;
+	}
+}
+
+.navigation-button {
+	color: white;
+	position: absolute;
+
+	@include md {
+		position: unset;
+	}
+
+	&:hover {
+		border-color: var(--light-blue, cornflowerblue);
+	}
+}
+
+.navigation-button-center {
+	border-radius: 4px;
+	border: solid white;
+	height: 24px;
+    left: 50%;
+	margin: auto;
+    top: 50%;
+    transform: translate(-50%, -50%);
+	width: 24px;
+
+	@include md {
+		grid-column-start: 2;
+		grid-column-end: 3;
+		transform: none;
+	}
+
+	&:hover {
+		box-shadow: 0 0 15px var(--box-shadow-grey, #cccccc);
+	}
+}
+
+.arrow {
+    align-self: baseline;
+	border: solid white;
+	border-width: 0 3px 3px 0;
+	height: 16px;
+	width: 16px;
+
+	@include md {
+		align-self: center;
+		justify-self: center;
+		top: unset;
+	}
+
+	&:hover {
+		box-shadow: 5px 5px 16px -2px var(--box-shadow-grey, #cccccc);
+	}
+}
+
+.arrow-right {
+	right: 25%;
+	top: 26%;
+	transform: rotate(-45deg) translate(-50%, 0);
+	-webkit-transform: rotate(-45deg) translate(-50%, 0);
+
+	@include md {
+		grid-column-start: 3;
+		grid-column-end: 4;
+		margin-left: 16px;
+		transform: rotate(-45deg);
+	}
+}
+  
+.arrow-left {
+	left: 25%;
+    top: 45%;
+	transform: rotate(135deg) translate(-50%, 0);
+	-webkit-transform: rotate(135deg) translate(-50%, 0);
+
+	@include md {
+		grid-column-start: 1;
+		grid-column-end: 2;
+		margin-right: 16px;
+		transform: rotate(135deg);
+	}
+}
+  
+.arrow-up {
+	left: 5%;
+	top: 32%;
+	transform: rotate(-135deg) translate(-50%, 0);
+	-webkit-transform: rotate(-135deg) translate(-50%, 0);
+
+	@include md {
+		grid-column-start: 2;
+		grid-column-end: 3;
+		margin-bottom: 16px;
+		transform: rotate(-135deg);
+	}
+}
+  
+.arrow-down {
+	right: 6%;
+	top: 36%;
+	transform: rotate(45deg) translate(-50%, 0);
+	-webkit-transform: rotate(45deg) translate(-50%, 0);
+
+	@include md {
+		grid-column-start: 2;
+		grid-column-end: 3;
+		margin-top: 16px;
+		transform: rotate(45deg);
+	}
+}

@@ -1,0 +1,29 @@
+@import './styles/mixins';
+
+.page-container {
+	display: flex;
+	flex-direction: column;
+
+	.main-container {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		margin: auto;
+		max-width: 980px;
+
+		@include md {
+			flex-direction: row;
+		}
+
+		main {
+			flex-grow: 1;
+		}
+
+		.page-navigation-wrapper {
+			@include md {
+				flex-basis: 136px;
+				flex-shrink: 0;
+			}
+		}
+	}
+}

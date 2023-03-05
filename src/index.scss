@@ -1,0 +1,25 @@
+:root {
+  --box-shadow-grey: #cccccc;
+  --link-color: #ffffff;
+  --light-blue: #b0e4f7;
+	--text-color: #cdcdcd;
+}
+
+html {
+	background: url("./assets/background.png") repeat;
+  color: var(--text-color, white);
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+a {
+  color: var(--link-color, white);
+  text-decoration: underline;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.space-nowrap {
+	white-space: nowrap;
+}
