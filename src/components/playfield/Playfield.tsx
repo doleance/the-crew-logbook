@@ -2,7 +2,7 @@ import './Playfield.scss';
 
 export default function Playfield() {
   const QUESTS_COUNT = 50;
-  const quests = Array(QUESTS_COUNT).fill().map(
+  const quests = Array(QUESTS_COUNT).fill(null).map(
     (_,index) => <li key={"quest-list-item-" + index}><button className="quest-list-item">{index + 1}</button></li>
   );
   return (

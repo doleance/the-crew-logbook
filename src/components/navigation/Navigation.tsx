@@ -1,7 +1,7 @@
 import './Navigation.scss';
 
 export default function Navigation() {
-  const scrollTo = (top = 0) => window.scrollTo({ top, behavior: 'smooth' });
+  const scrollTo = (top = 0): void => window.scrollTo({ top, behavior: 'smooth' });
   
   return (
     <div className="page-navigation-wrapper">
