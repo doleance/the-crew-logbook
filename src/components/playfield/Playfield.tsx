@@ -1,10 +1,14 @@
 import './Playfield.scss';
+import {QUESTS_COUNT} from '../../constants/page.constants';
+import { useContext } from 'react';
+import { PageContext } from '../../App';
 
 export default function Playfield() {
-  const QUESTS_COUNT = 50;
+  const { currentPage, setCurrentPage } = useContext(PageContext);
   const quests = Array(QUESTS_COUNT).fill(null).map(
-    (_,index) => <li key={"quest-list-item-" + index}><button className="quest-list-item">{index + 1}</button></li>
+    (_,index) => <li key={"quest-list-item-" + index}><button className="quest-list-item" onClick={() => setCurrentPage(index + 1)}>{index + 1}</button></li>
   );
+  
   return (
     <main className="main-content">
       <section className="main-section">
@@ -12,7 +16,7 @@ export default function Playfield() {
       </section>
       <section className="main-section">
         <h2>Küldetések</h2>
-        <p>Válassz küldetést:</p>
+        <p>Válassz küldetést: {currentPage}</p>
         
         <ul className="quest-list">{quests}</ul>
       </section>
