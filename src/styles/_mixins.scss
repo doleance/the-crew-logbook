@@ -1,25 +1,25 @@
-@import './breakpoints';
+@import "./breakpoints";
 
-@mixin sm {
+@mixin screen-sm {
 	@media (min-width: #{$screen-sm-min}) {
 		@content;
 	}
- }
- 
- @mixin md {
+}
+
+@mixin screen-md {
 	@media (min-width: #{$screen-md-min}) {
 		@content;
 	}
- }
- 
- @mixin lg {
+}
+
+@mixin screen-lg {
 	@media (min-width: #{$screen-lg-min}) {
 		@content;
 	}
- }
- 
- @mixin xl {
+}
+
+@mixin screen-xl {
 	@media (min-width: #{$screen-xl-min}) {
 		@content;
 	}
- }
+}

@@ -1,41 +1,62 @@
-@import '../../styles/mixins';
+@import "../../styles/mixins";
+@import "../../styles/elements/quest-listitem.scss";
+@import "../../styles/structures/main-sections.scss";
 
-.main-content {
-	margin: 8px 8px 68px;
+.main-section-header {
+	margin-bottom: 16px;
 
-	@include md {
-		margin:  16px;
-	}
-
-	.main-section {
-		margin-bottom: 32px;
+	.quest-listitem {
+		display: inline-flex;
 	}
 }
 
-.quest-list {
-	display: flex;
-	flex-wrap: wrap;
-    gap: 8px;
-	margin-top: 16px;
-	max-width: 600px;
+.quest-description {
+	margin-bottom: 32px;
+}
 
-	.quest-list-item {
+.quest-indicator-section {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+	justify-content: space-between;
+	margin-bottom: 32px;
+
+	@include screen-md {
 		align-items: center;
-		backdrop-filter: blur(2px);
-		background-color: rgba(255,255,255,.3);
-		border-radius: 50%;
-		box-shadow: 0px 0px 12px -3px var(--box-shadow-grey, #cccccc);
-		color: var(--text-color, white);
-		display: flex;
-		height: 52px;
-		justify-content: center;
-		padding: 8px;
-		width: 52px;
-	
-		&:hover {
-			border-color: cornflowerblue;
-			box-shadow: 0 0 8px 1px var(--box-shadow-grey, #cccccc);
-			color: var(--light-blue, cornflowerblue);
-		}
+		flex-direction: row;
 	}
+}
+
+.quest-card-indicator {
+	border: solid white 1px;
+	border-radius: 4px;
+	font-size: 1.5rem;
+	margin-left: 8px;
+	padding: 12px;
+}
+
+.quest-token-list {
+	display: flex;
+	gap: 8px;
+
+	.quest-token-indicator {
+		backdrop-filter: blur(2px);
+		background-color: rgba(#b0e4f7, 0.3);
+		border-radius: 4px;
+		border: 2px solid transparent;
+		display: inline;
+		padding: 4px 8px;
+	}
+}
+
+.quest-start-button {
+	margin-top: 32px;
+
+	@include screen-md {
+		margin-top: inherit;
+	}
+}
+
+.empty-quest-warning {
+	text-align: center;
 }

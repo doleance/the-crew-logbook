@@ -1,0 +1,25 @@
+.crew-button {
+	backdrop-filter: blur(2px);
+	background-color: rgba(#b0e4f7, 0.3);
+	border-radius: 4px;
+	border: 2px solid transparent;
+	box-shadow: 0 0 4px var(--box-shadow-grey, #cccccc);
+	color: white;
+	cursor: pointer;
+	display: inline-block;
+	font-weight: 800;
+	padding: 8px 20px;
+	text-align: center;
+	text-decoration: none;
+	text-indent: 0;
+	text-transform: uppercase;
+	transition-duration: 0.3s;
+	transition-property: background-color, border-color, box-shadow, color;
+	transition-timing-function: ease-out;
+	white-space: nowrap;
+
+	&:hover,
+	&:focus {
+		background: rgba(#b0e4f7, 0.6);
+	}
+}

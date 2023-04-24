@@ -1,4 +1,14 @@
-@import './styles/mixins';
+@import "./styles/mixins";
+@import "./styles/elements/buttons.scss";
+@import "./styles/elements/links.scss";
+
+html,
+body,
+div#root,
+.page-container,
+.main-container {
+	height: 100%;
+}
 
 .page-container {
 	display: flex;
@@ -8,10 +18,11 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
-		margin: auto;
+		margin: 0 auto;
 		max-width: 980px;
+		width: 100%;
 
-		@include md {
+		@include screen-md {
 			flex-direction: row;
 		}
 
@@ -20,7 +31,7 @@
 		}
 
 		.page-navigation-wrapper {
-			@include md {
+			@include screen-md {
 				flex-basis: 136px;
 				flex-shrink: 0;
 			}

@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
-import './App.scss';
-import Header from './components/header/Header';
-import Navigation from './components/navigation/Navigation';
-import Playfield from './components/playfield/Playfield';
-import { INITIAL_PAGE } from './constants/page.constants';
+import React, { useState } from "react";
+import "./App.scss";
+import Header from "./components/header/Header";
+import Home from "./components/home/Home";
+import Navigation from "./components/navigation/Navigation";
+import Playfield from "./components/playfield/Playfield";
+import { INITIAL_PAGE } from "./constants/page.constants";
 
 export interface PageContext {
   currentPage: number;
@@ -13,24 +14,27 @@ export interface PageContext {
 export const initialPageContext: PageContext = {
   currentPage: INITIAL_PAGE,
   setCurrentPage: () => {},
-}
+};
 
-export const PageContext = React.createContext<PageContext>(initialPageContext);
+export const appPageContext =
+  React.createContext<PageContext>(initialPageContext);
 
 function App() {
   const [currentPage, setCurrentPage] = useState(INITIAL_PAGE);
   const pageContext = { currentPage, setCurrentPage };
 
   return (
-    <PageContext.Provider value={pageContext}>
-      <div className="page-container">
-        <Header />
-        <div className="main-container">
-          <Playfield />
-          <Navigation />
+    <React.StrictMode>
+      <appPageContext.Provider value={pageContext}>
+        <div className="page-container">
+          <Header />
+          <div className="main-container">
+            {currentPage === 0 ? <Home /> : <Playfield />}
+            <Navigation />
+          </div>
         </div>
-      </div>
-    </PageContext.Provider>
+      </appPageContext.Provider>
+    </React.StrictMode>
   );
 }
 

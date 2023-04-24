@@ -1,0 +1,19 @@
+@import "../../styles/mixins";
+@import "../../styles/structures/main-sections.scss";
+@import "../../styles/elements/quest-listitem.scss";
+
+.quest-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+  max-width: 600px;
+
+  .quest-listitem {
+    &:hover {
+      border-color: cornflowerblue;
+      box-shadow: 0 0 8px 1px var(--box-shadow-grey, #cccccc);
+      color: var(--light-blue, cornflowerblue);
+    }
+  }
+}

@@ -24,6 +24,10 @@ The app uses Babel and Webpack under the bonnet.
 
 For more please check [react guideline](docs/react.guidline.md)
 
+## Technical debts and todos
+
+For fixes and todos I am considering, check the [TODO Agenda](docs/todo-agenda.md)
+
 ## Biography
 
 Worked from:

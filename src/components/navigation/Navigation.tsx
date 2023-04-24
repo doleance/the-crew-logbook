@@ -1,10 +1,10 @@
 import { useContext } from 'react';
 import './Navigation.scss';
-import {PageContext} from '../../App'
+import {appPageContext} from '../../App'
 import {QUESTS_COUNT} from '../../constants/page.constants';
 
 export default function Navigation() {
-  const { currentPage, setCurrentPage } = useContext(PageContext);
+  const { currentPage, setCurrentPage } = useContext(appPageContext);
   const scrollTo = (top = 0): void => window.scrollTo({ top, behavior: 'smooth' });
   const switchPage = (pageToSet: number): void => {
     if (pageToSet > QUESTS_COUNT || pageToSet < 0) {
