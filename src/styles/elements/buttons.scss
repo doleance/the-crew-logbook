@@ -18,8 +18,11 @@
 	transition-timing-function: ease-out;
 	white-space: nowrap;
 
-	&:hover,
-	&:focus {
+	&:hover {
 		background: rgba(#b0e4f7, 0.6);
+	}
+
+	&:active {
+		box-shadow: 0 0 12px var(--box-shadow-grey, #cccccc);
 	}
 }

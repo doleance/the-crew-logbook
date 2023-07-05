@@ -60,3 +60,70 @@
 .empty-quest-warning {
 	text-align: center;
 }
+
+.quest-goal-section {
+	background-color: rgba(#b0e4f7, 0.3);
+	border-radius: 4px;
+	min-height: 480px;
+	overflow: hidden;
+	padding: 4px;
+
+	@include screen-md {
+		min-height: 320px;
+	}
+
+	.playing-card {
+		border-radius: 5px;
+		background-color: #fff;
+		display: inline-block;
+		font-size: 2rem;
+		margin: 0 0.5rem 0.5rem 0;
+		border: 1px solid #ddd;
+		padding: 40px 32px;
+		transform: translateY(-125%);
+		transition: transform 0.5s cubic-bezier(0.25, 0, 0.28, 1.43);
+
+		&.playing-card--yellow {
+			background-color: var(--bg-yellow);
+			color: var(--functional-yellow);
+		}
+
+		&.playing-card--blue {
+			background-color: var(--bg-blue);
+			color: var(--functional-blue);
+		}
+
+		&.playing-card--green {
+			background-color: var(--bg-green);
+			color: var(--functional-green);
+		}
+
+		&.playing-card--red {
+			background-color: var(--bg-red);
+			color: var(--functional-red);
+		}
+	}
+
+	.animated {
+		.playing-card {
+			transform: translateY(0);
+			transition: transform 0.5s cubic-bezier(0.25, -1.42, 0.28, 1.43);
+		}
+
+		.playing-card:nth-child(4n - 1) {
+			transition-delay: 0;
+		}
+
+		.playing-card:nth-child(4n - 2) {
+			transition-delay: 0.15s;
+		}
+
+		.playing-card:nth-child(4n - 3) {
+			transition-delay: 0.3s;
+		}
+
+		.playing-card:nth-child(4n - 4) {
+			transition-delay: 0.45s;
+		}
+	}
+}

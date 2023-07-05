@@ -69,6 +69,10 @@
 	&:hover {
 		box-shadow: 0 0 15px var(--box-shadow-grey, #cccccc);
 	}
+
+	&:active {
+		box-shadow: 0 0 20px var(--box-shadow-grey, #cccccc);
+	}
 }
 
 .arrow {
@@ -86,6 +90,10 @@
 
 	&:hover {
 		box-shadow: 5px 5px 16px -2px var(--box-shadow-grey, #cccccc);
+	}
+
+	&:active {
+		box-shadow: 5px 5px 16px 0 var(--box-shadow-grey, #cccccc);
 	}
 }
 

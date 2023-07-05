@@ -1,9 +1,30 @@
+import {
+	CardColor,
+	CardNumber,
+	DealtCard,
+} from "../interfaces/dealt-card.interface";
 import { LevelInformation } from "../interfaces/level-information.interface";
 
 export const forwardTokensAsciiCodes = [62, 8811, 8921, 11000];
 export const numberTokensAsciiCodes = [49, 50, 51, 52, 53];
 export const omegaTokenAsciiCode = 937;
 export const noTokenAsciiCode = 8709;
+
+export const MAX_COLOR_CARD_NUMBER = 9;
+
+export const ALL_QUEST_CARDS: DealtCard[] = (() => {
+	const allPlayingCards: DealtCard[] = [];
+	const cardColorValues = Object.values(CardColor);
+	for (let i = 0; i < cardColorValues.length; i++) {
+		for (let j = 1; j <= MAX_COLOR_CARD_NUMBER; j++) {
+			allPlayingCards.push({
+				cardColor: cardColorValues[i],
+				cardNumber: j as CardNumber,
+			});
+		}
+	}
+	return allPlayingCards;
+})();
 
 export const LEVEL_INFORMATION: LevelInformation[] = [
 	{
